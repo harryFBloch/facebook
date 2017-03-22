@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1r5-P7-MMg">
+                                <rect key="frame" x="277" y="28" width="47" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFJ-TZ-ChB">
+                                <rect key="frame" x="279" y="59" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Otz-at-Bd6">
+                                <rect key="frame" x="186" y="123" width="228" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="LIw-sO-38Q"/>
+                                    <constraint firstAttribute="width" constant="228" id="UeM-EB-r7C"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDQ-OC-6NX">
+                                <rect key="frame" x="247" y="325" width="106" height="30"/>
+                                <state key="normal" title="Upload a Photo"/>
+                                <connections>
+                                    <action selector="photoUpload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8q8-0a-gLy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Otz-at-Bd6" secondAttribute="bottom" constant="294" id="E9z-Ne-iam"/>
+                            <constraint firstItem="LFJ-TZ-ChB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JrY-mM-cL8"/>
+                            <constraint firstItem="aDQ-OC-6NX" firstAttribute="top" secondItem="Otz-at-Bd6" secondAttribute="bottom" constant="19" id="WF1-V6-mJ7"/>
+                            <constraint firstItem="Otz-at-Bd6" firstAttribute="top" secondItem="LFJ-TZ-ChB" secondAttribute="bottom" constant="43" id="XWx-Ax-WcI"/>
+                            <constraint firstItem="1r5-P7-MMg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aRy-Ly-SBO"/>
+                            <constraint firstItem="LFJ-TZ-ChB" firstAttribute="top" secondItem="1r5-P7-MMg" secondAttribute="bottom" constant="8" id="eck-pg-VUb"/>
+                            <constraint firstItem="aDQ-OC-6NX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sat-3C-FeW"/>
+                            <constraint firstItem="Otz-at-Bd6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wGP-rc-V6V"/>
+                            <constraint firstItem="1r5-P7-MMg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="wkY-6j-Jae"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="E9z-Ne-iam"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="LFJ-TZ-ChB" id="5nz-ax-UIU"/>
+                        <outlet property="nameLabel" destination="1r5-P7-MMg" id="tLE-yJ-tCl"/>
+                        <outlet property="profilePic" destination="Otz-at-Bd6" id="v7F-Xm-vAx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="315"/>
+        </scene>
+    </scenes>
+</document>
